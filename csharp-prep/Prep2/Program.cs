@@ -9,7 +9,7 @@ class Program
         int gradeNum = int.Parse(grade);
 
         string letter = "";
-        
+
         if (gradeNum >= 90)
         {
             letter = "A";
