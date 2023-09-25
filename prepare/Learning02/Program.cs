@@ -16,9 +16,13 @@ class Program
         job2._startYear = 2022;
         job2._endYear = 2023;
 
-        job1.DisplayJobDetails();
-        job2.DisplayJobDetails();
+        Resume resume1 = new Resume();
+        resume1._name = "Brent Smith";
 
+        resume1._jobs.Add(job1);
+        resume1._jobs.Add(job2);
+
+        resume1.Display();
     }
     
 }
