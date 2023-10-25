@@ -7,10 +7,7 @@ public class PromptGenerator
 
     public Random rand;
 
-    public int index;
-
-    public string randomPrompt;
-
+    
     public PromptGenerator()
     {
         this.prompts = new List<string> {"Who was the most intersting person I interacted with today?",
@@ -22,14 +19,13 @@ public class PromptGenerator
         "How did I improve myself today?"};
 
         this.rand = new Random();
-
-        this.index = rand.Next(prompts.Count);
-
-        this.randomPrompt = prompts[index];
     }
 
     public void DisplayPrompt()
     {
+        int index = rand.Next(prompts.Count);
+        string randomPrompt = prompts[index];
+
         Console.WriteLine(randomPrompt);   
     }
 }

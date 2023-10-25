@@ -4,10 +4,16 @@ class Program
 {
     static void Main(string[] args)
     {
-        PromptGenerator prompt = new PromptGenerator();
-        prompt.DisplayPrompt();
-        
-        PromptGenerator prompt1 = new PromptGenerator();
-        prompt1.DisplayPrompt();
+        string journal;
+        string journal2;
+
+        Entry userEntry = new Entry();
+        journal = userEntry.WriteEntry();
+
+        Entry userEntry2 = new Entry();
+        journal2 = userEntry2.WriteEntry();
+
+        Console.WriteLine(journal);
+        Console.WriteLine(journal2);
     }
 }
