@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 class Program
 {
@@ -9,11 +10,12 @@ class Program
 
         Entry userEntry = new Entry();
         journal = userEntry.WriteEntry();
+        journal2 = userEntry.WriteEntry();
 
-        Entry userEntry2 = new Entry();
-        journal2 = userEntry2.WriteEntry();
-
-        Console.WriteLine(journal);
-        Console.WriteLine(journal2);
+        for (int i = 0; i <userEntry.dates.Count; i++)
+        {
+            Console.WriteLine(userEntry.dates[i]);
+            Console.WriteLine(userEntry.entries[i]);
+        }
     }
 }
